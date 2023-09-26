@@ -5,18 +5,20 @@ void main() {
 }
 
 class App extends StatelessWidget {
+  const App({super.key});
+
   //statelessWidget 클래스에서 build메소드를 상속 받는 override
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Color(0xFF181818),
+        backgroundColor: const Color(0xFF181818),
         body: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 70,
               ),
               Row(
@@ -25,7 +27,7 @@ class App extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      Text(
+                      const Text(
                         'Hey, Selena',
                         style: TextStyle(
                           color: Colors.white,
@@ -33,7 +35,7 @@ class App extends StatelessWidget {
                           fontWeight: FontWeight.w800,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 5,
                       ),
                       Text(
@@ -47,7 +49,7 @@ class App extends StatelessWidget {
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 70,
               ),
               Text(
@@ -55,10 +57,10 @@ class App extends StatelessWidget {
                 style: TextStyle(
                     fontSize: 22, color: Colors.white.withOpacity(0.8)),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
-              Text(
+              const Text(
                 '\$5 194 482',
                 style: TextStyle(
                   fontSize: 42,
@@ -66,7 +68,7 @@ class App extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 25,
               ),
               Row(
@@ -74,10 +76,10 @@ class App extends StatelessWidget {
                 children: [
                   Container(
                     decoration: BoxDecoration(
-                      color: Color(0xFFF2B33A),
+                      color: const Color(0xFFF2B33A),
                       borderRadius: BorderRadius.circular(45),
                     ),
-                    child: Padding(
+                    child: const Padding(
                       padding: EdgeInsets.symmetric(
                         vertical: 20,
                         horizontal: 45,
@@ -91,15 +93,15 @@ class App extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 20,
                   ),
                   Container(
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 33, 33, 33),
+                      color: const Color.fromARGB(255, 33, 33, 33),
                       borderRadius: BorderRadius.circular(45),
                     ),
-                    child: Padding(
+                    child: const Padding(
                       padding: EdgeInsets.symmetric(
                         vertical: 20,
                         horizontal: 45,
@@ -115,12 +117,12 @@ class App extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 60,
               ),
               Row(
                 children: [
-                  Text(
+                  const Text(
                     'Wallets',
                     style: TextStyle(
                       fontSize: 35,
@@ -128,7 +130,7 @@ class App extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 160,
                   ),
                   Text(
