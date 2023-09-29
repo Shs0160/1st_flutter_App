@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/widgets/Button.dart';
 
 void main() {
-  runApp(App());
+  runApp(const App());
 }
 
 class App extends StatelessWidget {
@@ -69,51 +70,20 @@ class App extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 25,
+                height: 30,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: const Color(0xFFF2B33A),
-                      borderRadius: BorderRadius.circular(45),
-                    ),
-                    child: const Padding(
-                      padding: EdgeInsets.symmetric(
-                        vertical: 20,
-                        horizontal: 45,
-                      ),
-                      child: Text(
-                        'Transfer',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w300,
-                          fontSize: 18,
-                        ),
-                      ),
-                    ),
+                  Button(
+                    text: 'Transfer',
+                    bgColor: Color(0xFFF2B33A),
+                    textColor: Colors.black,
                   ),
-                  const SizedBox(
-                    width: 20,
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 33, 33, 33),
-                      borderRadius: BorderRadius.circular(45),
-                    ),
-                    child: const Padding(
-                      padding: EdgeInsets.symmetric(
-                        vertical: 20,
-                        horizontal: 45,
-                      ),
-                      child: Text(
-                        'Request',
-                        style: TextStyle(
-                            color: Color(0xFFFAFAFA),
-                            fontSize: 18,
-                            fontWeight: FontWeight.w300),
-                      ),
-                    ),
+                  Button(
+                    text: 'Request',
+                    bgColor: Color(0xFF1F2123),
+                    textColor: Colors.white,
                   ),
                 ],
               ),
@@ -121,6 +91,8 @@ class App extends StatelessWidget {
                 height: 60,
               ),
               Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text(
                     'Wallets',
@@ -129,9 +101,6 @@ class App extends StatelessWidget {
                       fontWeight: FontWeight.w600,
                       color: Colors.white,
                     ),
-                  ),
-                  const SizedBox(
-                    width: 160,
                   ),
                   Text(
                     'View All',
@@ -142,6 +111,9 @@ class App extends StatelessWidget {
                     ),
                   ),
                 ],
+              ),
+              const SizedBox(
+                height: 20,
               ),
             ],
           ),
